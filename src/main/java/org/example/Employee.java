@@ -19,6 +19,11 @@ public class Employee {
     private LocalDate birthday;
     @Column
     private String email;
+
+    @ManyToOne(fetch = FetchType.EAGER) // Employee podpinamy pod Department, bo employee bedzie mial do którego departamentu przynalezy, a nie departament do którego pracownika przynalezy
+    @JoinColumn(name = "department_id")
+    private Department department;
+
     public Employee() {
     }
 
@@ -58,6 +63,10 @@ public class Employee {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 
     @Override
