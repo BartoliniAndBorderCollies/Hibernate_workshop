@@ -18,6 +18,9 @@
         <property name="hibernate.hbm2ddl.auto">create</property>
 
         <mapping class="org.example.Employee"/>
+        <mapping class="org.example.Department"/>
+
+<!--        <mapping class="org.example.Account"/> kolejne nazwy klas wymieniam -->
 
     </session-factory>
 </hibernate-configuration>
